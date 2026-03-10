@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "Required:"
+echo "  curl - for downloading releases"
+echo "  sha256sum - for checksum verification"
+echo ""
+echo "Optional:"
+echo "  cosign - for sigstore signature verification"

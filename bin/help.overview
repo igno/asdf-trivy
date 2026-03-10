@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "Trivy plugin for asdf version manager."
+echo ""
+echo "Trivy is a comprehensive security scanner by Aqua Security."
+echo "https://github.com/aquasecurity/trivy"
