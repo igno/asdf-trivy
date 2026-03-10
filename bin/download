@@ -11,4 +11,9 @@ if [ "${ASDF_INSTALL_TYPE:-version}" != "version" ]; then
 	fail "asdf-${TOOL_NAME} supports release installs only"
 fi
 
-download_release "${ASDF_INSTALL_VERSION}" "${ASDF_DOWNLOAD_PATH}"
+version="${ASDF_INSTALL_VERSION}"
+if [ "${version}" = "latest" ]; then
+	version=$("${plugin_dir}/bin/latest-stable")
+fi
+
+download_release "${version}" "${ASDF_DOWNLOAD_PATH}"
